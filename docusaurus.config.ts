@@ -79,6 +79,15 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    search: {
+      provider: 'local',
+      options: {
+        hashed: true,
+        language: ["en", "zh"],
+        highlightSearchTermsOnTargetPage: true,
+        indexDocs: true,
+      },
+    },
     navbar: {
       title: 'My Site',
       logo: {
@@ -150,6 +159,10 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  themes: [
+    '@easyops-cn/docusaurus-search-local'
+  ],
 };
 
 export default config;
